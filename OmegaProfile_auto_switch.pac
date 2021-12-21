@@ -11,6 +11,14 @@ var FindProxyForURL = function(init, profiles) {
 }("+auto switch", {
     "+auto switch": function(url, host, scheme) {
         "use strict";
+        if (/(?:^|\.)yubico\.com$/.test(host)) return "+clash";
+        if (/(?:^|\.)be4\.herokuapp\.com$/.test(host)) return "+clash";
+        if (/(?:^|\.)google-analytics\.com$/.test(host)) return "+clash";
+        if (/(?:^|\.)gstatic\.com$/.test(host)) return "+clash";
+        if (/(?:^|\.)googletagmanager\.com$/.test(host)) return "+clash";
+        if (/(?:^|\.)trellocdn\.com$/.test(host)) return "+clash";
+        if (/(?:^|\.)i2p$/.test(host)) return "+I2P";
+        if (/(?:^|\.)hypnotube\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)syncthing\.net$/.test(host)) return "+clash";
         if (/(?:^|\.)riseup\.net$/.test(host)) return "+clash";
         if (/(?:^|\.)firefox\.com$/.test(host)) return "+clash";
@@ -26,31 +34,22 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)discord\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)jsdelivr\.net$/.test(host)) return "+clash";
         if (/(?:^|\.)crisp\.chat$/.test(host)) return "+clash";
-        if (/(?:^|\.)gravatar\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)socloud\.me$/.test(host)) return "+clash";
-        if (/(?:^|\.)gstatic\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)limbopro\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)bettergram\.io$/.test(host)) return "+clash";
         if (/(?:^|\.)2ch\.net$/.test(host)) return "+clash";
         if (/(?:^|\.)8kun\.top$/.test(host)) return "+clash";
         if (/(?:^|\.)warwick\.ac\.uk$/.test(host)) return "+clash";
         if (/(?:^|\.)iq\.com$/.test(host)) return "+clash";
-        if (/(?:^|\.)google\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)snapchat\.com$/.test(host)) return "+clash";
-        if (/(?:^|\.)googletagmanager\.com$/.test(host)) return "+clash";
-        if (/(?:^|\.)google-analytics\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)qy\.net$/.test(host)) return "+clash";
-        if (/(?:^|\.)fonts\.googleapis\.com$/.test(host)) return "+clash";
-        if (/(?:^|\.)ajax\.googleapis\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)fc2\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)51actress\.com$/.test(host)) return "+clash";
-        if (/(?:^|\.)hypnotube\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)b-cdn\.net$/.test(host)) return "+clash";
         if (/(?:^|\.)ngfiles\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)newgrounds\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)spreaker\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)newstatesman\.com$/.test(host)) return "+clash";
-        if (/(?:^|\.)grammarly\.com$/.test(host)) return "DIRECT";
         if (/(?:^|\.)ucl\.ac\.uk$/.test(host)) return "+clash";
         if (/(?:^|\.)acgc\.win$/.test(host)) return "+clash";
         if (/(?:^|\.)hku\.hk$/.test(host)) return "+clash";
@@ -66,34 +65,10 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)userapi\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)lse\.ac\.uk$/.test(host)) return "+clash";
         if (/(?:^|\.)tiktok\.com$/.test(host)) return "+clash";
-        if (/(?:^|\.)booksc\.me$/.test(host)) return "+clash";
-        if (/(?:^|\.)3lib\.net$/.test(host)) return "+clash";
-        if (/(?:^|\.)b-ok\.asia$/.test(host)) return "+clash";
-        if (/(?:^|\.)2lib\.org$/.test(host)) return "+clash";
-        if (/(?:^|\.)4lib\.org$/.test(host)) return "+clash";
-        if (/(?:^|\.)1lib\.org$/.test(host)) return "+clash";
-        if (/(?:^|\.)1lib\.club$/.test(host)) return "+clash";
-        if (/(?:^|\.)1lib\.net$/.test(host)) return "+clash";
-        if (/(?:^|\.)b-ok\.as$/.test(host)) return "+clash";
-        if (/(?:^|\.)singlelogin\.loc$/.test(host)) return "+clash";
-        if (/(?:^|\.)loginzlib2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd\.onion$/.test(host)) return "+clash";
-        if (/(?:^|\.)book4you\.org$/.test(host)) return "+clash";
-        if (/(?:^|\.)1lib\.domains$/.test(host)) return "+clash";
-        if (/(?:^|\.)z-lib\.org$/.test(host)) return "+clash";
-        if (/(?:^|\.)art1lib\.com$/.test(host)) return "+clash";
-        if (/(?:^|\.)art1lib\.org$/.test(host)) return "+clash";
-        if (/(?:^|\.)booksc\.org$/.test(host)) return "+clash";
-        if (/(?:^|\.)1lib\.education$/.test(host)) return "+clash";
-        if (/(?:^|\.)1lib\.limited$/.test(host)) return "+clash";
-        if (/(?:^|\.)b-ok\.global$/.test(host)) return "+clash";
-        if (/(?:^|\.)libgen\.li$/.test(host)) return "+clash";
-        if (/(?:^|\.)libgen\.gs$/.test(host)) return "+clash";
-        if (/(?:^|\.)libgen\.rs$/.test(host)) return "+clash";
         if (/(?:^|\.)extrabux\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)geniuslinkcdn\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)magazine-lib\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)magazinebis\.com$/.test(host)) return "+clash";
-        if (/(?:^|\.)cloudflare\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)nhentai\.net$/.test(host)) return "+clash";
         if (/(?:^|\.)ust\.hk$/.test(host)) return "+clash";
         if (/(?:^|\.)linkedin\.com$/.test(host)) return "+clash";
@@ -672,6 +647,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)terabox\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)thinkgeek\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)thebodyshop-usa\.com$/.test(host)) return "+clash";
+        if (/(?:^|\.)tiktok\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)tma\.co\.jp$/.test(host)) return "+clash";
         if (/(?:^|\.)tracfone\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)tryheart\.jp$/.test(host)) return "+clash";
@@ -5673,6 +5649,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)rule34\.xxx$/.test(host)) return "+clash";
         if (scheme === "http" && url.indexOf(".runbtx.com") >= 0) return "+clash";
         if (scheme === "http" && url.indexOf(".rushbee.com") >= 0) return "+clash";
+        if (/(?:^|\.)rusvpn\.com$/.test(host)) return "+clash";
         if (scheme === "http" && url.indexOf(".ruten.com.tw") >= 0) return "+clash";
         if (/(?:^|\.)ruten\.com\.tw$/.test(host)) return "+clash";
         if (scheme === "http" && url.indexOf("rutube.ru") >= 0) return "+clash";
@@ -6242,7 +6219,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".tcsovi.org") >= 0) return "+clash";
         if (scheme === "http" && url.indexOf(".tdm.com.mo") >= 0) return "+clash";
         if (scheme === "http" && url.indexOf("teamamericany.com") >= 0) return "+clash";
-        if (/(?:^|\.)static\.techspot\.com$/.test(host)) return "+clash";
+        if (/(?:^|\.)techspot\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)techviz\.net$/.test(host)) return "+clash";
         if (/(?:^|\.)teck\.in$/.test(host)) return "+clash";
         if (scheme === "http" && url.indexOf(".teeniefuck.net") >= 0) return "+clash";
@@ -6734,8 +6711,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)legaltech\.law\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)blogs\.tampabay\.com$/.test(host)) return "+clash";
         if (/(?:^|\.)contests\.twilio\.com$/.test(host)) return "+clash";
-        if (scheme === "http" && url.indexOf(".embr.in") >= 0) return "+clash";
-        if (/(?:^|\.)embr\.in$/.test(host)) return "+clash";
+        if (/(?:^|\.)typora\.io$/.test(host)) return "+clash";
         if (scheme === "http" && url.indexOf(".u9un.com") >= 0) return "+clash";
         if (/(?:^|\.)u9un\.com$/.test(host)) return "+clash";
         if (scheme === "http" && url.indexOf(".ubddns.org") >= 0) return "+clash";
@@ -7522,5 +7498,10 @@ var FindProxyForURL = function(init, profiles) {
         "use strict";
         if (/^127\.0\.0\.1$/.test(host) || /^::1$/.test(host) || /^localhost$/.test(host)) return "DIRECT";
         return "PROXY 127.0.0.1:7890";
+    },
+    "+I2P": function(url, host, scheme) {
+        "use strict";
+        if (/^127\.0\.0\.1$/.test(host) || /^::1$/.test(host) || /^localhost$/.test(host)) return "DIRECT";
+        return "PROXY 127.0.0.1:4444";
     }
 });
