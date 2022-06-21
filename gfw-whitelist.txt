@@ -280,6 +280,7 @@
 ||getfedora.org
 ||getui.com
 ||gfan.com
+||greenmangaming.com
 ||gitee.com
 ||gmw.cn
 ||gnoosic.com
